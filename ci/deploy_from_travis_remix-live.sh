@@ -9,7 +9,7 @@ git config user.email "$COMMIT_AUTHOR_EMAIL"
 git checkout --orphan gh-pages
 git rm --cached -r -f .
 echo "# Automatic build" > README.md
-echo "Built website from \`$SHA\`. See https://github.com/ethereum/remix-ide/ for details." >> README.md
+echo "Built website from \`$SHA\`. See https://github.com/Spiderpowa/remix-ide/ for details." >> README.md
 echo "To use an offline copy, download \`remix-$SHA.zip\`." >> README.md
 # ZIP the whole directory
 zip -r remix-$SHA.zip $FILES_TO_PACKAGE
@@ -17,4 +17,4 @@ zip -r remix-$SHA.zip $FILES_TO_PACKAGE
 git add -f $FILES_TO_PACKAGE remix-$SHA.zip
 git commit -m "Built website from {$SHA}."
 
-git push -f git@github.com:ethereum/remix-live.git gh-pages
+git push -f git@github.com:Spiderpowa/remix-live.git gh-pages
