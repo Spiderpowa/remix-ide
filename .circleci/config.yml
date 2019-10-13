@@ -21,6 +21,7 @@ jobs:
 
     steps:
       - checkout
+      - run: sudo npm install -g npm
       - run: npm install
       - run: npm run lint && npm run test && npm run make-mock-compiler
       - run:
